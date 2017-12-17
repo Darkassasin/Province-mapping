@@ -1,0 +1,11 @@
+<h6>तपाइको प्रदेश चन्नुहोस</h6>
+<select class="form-control col-md-4" name="province" [(ngModel)]="selectedprovince">
+  <option *ngFor="let province of provinceListing" class="form-control" [ngValue]="province">{{province.province}}</option>
+</select>
+
+<h6>तपाइको जिल्ला चन्नुहोस</h6>
+<select class="form-control col-md-4" name="district">
+    <option *ngFor="let selected of selectedprovince.district" class="form-control" [ngValue]="selected">
+      {{selected}}
+    </option>
+</select>
